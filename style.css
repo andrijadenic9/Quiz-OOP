@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui;
+}
+
+.welcome {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #29D663 0%, #f84f4f 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome h2 {
+    margin: 50px;
+    color: #fff;
+    text-shadow: 0px 2px 5px #11111138, 2px 0px 10px #1111117a;
+    font-size: 35px;
+}
+
+.welcome button, button {
+    padding: 20px;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 0px 2px 5px #11111138, 2px 0px 10px #1111117a;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #f84f4f 0%, #29D663 100%);
+    border: 2px solid #fff;
+    box-shadow: 0px 2px 5px #11111138, 2px 0px 10px #1111117a, 2px 0px 20px #58585866;
+    cursor: pointer;
+}
+
+.welcome button:hover {
+    background: linear-gradient(90deg, #29D663 0%, #f84f4f 100%);
+}
+
+.choose-category {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #29D663 0%, #f84f4f 100%);
+    color: #fff;
+    text-shadow: 0px 2px 5px #11111138, 2px 0px 10px #1111117a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    display: flex;
+    flex-grow: 1;
+    max-width: 200px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+
+    color: #fff;
+    text-shadow: 0px 2px 5px #11111138, 2px 0px 10px #1111117a;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #f84f4f 0%, #29D663 100%);
+    border: 2px solid #fff;
+    box-shadow: 0px 2px 5px #11111138, 2px 0px 10px #1111117a, 2px 0px 20px #58585866;
+}
+
+.category:hover {
+    background: linear-gradient(90deg, #29D663 0%, #f84f4f 100%);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.quiz > * {
+    text-align: center;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(90deg, #f84f4f 0%, #29D663 100%);
+}
+
+header h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: #58585812;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(90deg, #f84f4f 0%, #29D663 100%);
+}
+
+.final-answer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-answer h3 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.yes,
+.no {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(9, 9, 9);
+    cursor: pointer;
+    min-width: 100px;
+    font-weight: 700;
+}
+
+.yes {
+    background: #29D663;
+}
+
+.no {
+    background: #f84f4f;
+}
+
+.question {
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: system-ui;
+}
+
+.option {
+    border: 1px solid #fff;
+    width: 40%;
+    height: 12vh;
+    padding: 20px;
+    margin: 20px;
+    background: #f84f4f;
+    box-shadow: 0px 2px 5px #11111138, 0px 0px 5px #1111117a, 0px 0px 20px #58585866;
+    border-radius: 5px;
+    line-height: 1.4;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.question-counter {
+    display: flex;
+}
+
+.answer-history {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 10vh;
+    display: none;
+}
+
+.single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border-left: 1px solid #fff;
+}
+
+.display-result h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.display-result,
+.play-again-holder,
+.choose-category,
+.quiz {
+    display: none;
+}
+
+.loader-div {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, #f84f4f 0%, #29D663 100%);
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #f84f4f;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
